@@ -1,0 +1,60 @@
+.communityCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--home-card-background);
+  border: 1px solid var(--home-card-border-color);
+  border-radius: 12px;
+  /* margin: 10px 0; */
+  margin-bottom: 2rem;
+  padding: 16px 20px;
+  transition: all .25s;
+}
+
+.communityCard>.text {
+  flex: 1;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.communityCard>.text p {
+  margin-top: 4px;
+  margin-bottom: 8px;
+  color: var(--home-card-p-color);
+  font-size: 12px;
+}
+
+.communityCard .linkIcon {
+  cursor: pointer;
+  font-size: 0;
+}
+
+.communityCard h5 {
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  color: var(--home-card-hx-color);
+}
+
+.communityCard p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--home-card-p-color);
+}
+
+.communityCard svg {
+  transition: transform .25s;
+  transition-delay: .1s;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+.communityCard:hover {
+  box-shadow: var(--home-card-box-hover-shadow);
+}
+
+.communityCard:hover svg {
+  transform: scale(1.05);
+}

@@ -1,0 +1,174 @@
+.GetUpdatesWrap {
+  position: relative;
+}
+
+.GetUpdatesRow {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 30px 40px;
+}
+
+.coldd h3,
+.coldd p {
+  padding: 0;
+  margin: 0;
+}
+
+.coldd {
+  display: flex;
+}
+
+.GetUpdatesContent {
+  flex: 1;
+  min-height: 140px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.GetUpdatesDocs {
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.GetUpdatesDocs h3,
+.GetUpdatesDocs p {
+  padding: 0;
+  margin: 0;
+}
+
+.GetUpdatesSubscribe {
+  display: flex;
+  height: 60px;
+  background: var(--home-subscribe-color);
+  box-shadow: 0px 8px 60px -10px rgba(11, 27, 68, 0.15);
+  border-radius: 10px;
+}
+
+.GetUpdatesSubscribe input {
+  display: block;
+  box-sizing: border-box;
+  padding-left: 20px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  line-height: inherit;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+  resize: none;
+  user-select: none;
+  outline: none;
+}
+
+.GetUpdatesSubscribe input::-webkit-input-placeholder {
+  color: var(--home-card-p-color);
+}
+
+.GetUpdatesSubscribe button {
+  background: linear-gradient(93.01deg, #42A2FF 2.85%, #0B84FF 100%), #003DD9;
+  border: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  font-weight: 600;
+  padding: .5rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.GetUpdatesSubscribe button:hover {
+  border: 0;
+}
+
+.GetUpdatesSubscribe button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.GetUpdatesSubscribe button:focus-visible {
+  box-shadow: none;
+}
+
+/* 大于1200px */
+@media screen and (min-width:1251px) {
+  .GetUpdatesRow {
+    padding: 30px 40px;
+  }
+
+  .GetUpdatesContent {
+    margin-left: 20px;
+  }
+}
+
+/* 大于960px，小于1199px */
+/* @media screen and (min-width: 960px) and (max-width: 1199px) {
+  .GetUpdatesRow {
+    padding-left: 0;
+  }
+
+  .GetUpdatesDocs {
+    width: auto;
+    text-align: center;
+  }
+} */
+
+/* 大于967px，小于119px */
+/* @media screen and (min-width: 925px) and (max-width: 1250px) {
+  .GetUpdatesRow {
+    padding-left: 0;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .GetUpdatesDocs {
+    width: 280px;
+    margin-top: 20px;
+  }
+} */
+
+/* 880分辨率（大于768px，小于959px） */
+@media screen and (min-width: 768px) and (max-width: 1250px) {
+  .GetUpdatesRow {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .GetUpdatesDocs {
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .GetUpdatesSubscribe {
+    margin-left: 20px;
+  }
+}
+
+/* 440分辨率以下（小于767px） */
+@media only screen and (max-width: 767px) {
+  .GetUpdatesRow {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .GetUpdatesContent {
+    flex-direction: column;
+  }
+
+  .GetUpdatesDocs {
+    text-align: center;
+    margin-top: 20px;
+  }
+}

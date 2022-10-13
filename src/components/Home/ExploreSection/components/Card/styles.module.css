@@ -1,0 +1,49 @@
+.exploreCard {
+  display: flex;
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  height: 140px;
+  background: var(--home-card-background);
+  border: 1px solid var(--home-card-border-color);
+  border-radius: 18px;
+  /* margin: 10px 0; */
+  margin-bottom: 2rem;
+  padding: 20px 25px;
+  transition: all .25s;
+}
+
+.exploreCardCon {
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.exploreCard h5 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--home-card-hx-color);
+}
+
+.exploreCardCon p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--home-card-p-color);
+}
+
+.exploreCard svg {
+  transition: transform .25s;
+  transition-delay: .1s;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+.exploreCard:hover {
+  box-shadow: var(--home-card-box-hover-shadow);
+}
+
+.exploreCard:hover svg {
+  transform: scale(1.05);
+}
