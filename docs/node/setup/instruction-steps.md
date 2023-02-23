@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Instruction Steps
 description: How to install and update GotaBit
 sidebar_position: 1
 ---
@@ -9,6 +9,8 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
+>:memo: **Pre-requisites**
+Before installation please read the [minimum technical requirements](/docs/node/pre-requisites/techenv.md)
 
 ## From Binary 
 

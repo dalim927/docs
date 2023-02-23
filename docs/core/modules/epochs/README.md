@@ -6,9 +6,9 @@ title: Epochs Overview
 
 ## Abstract
 
-Often in the SDK, we would like to run certain code every-so often. The
+Often in the SDK, we would like to run a certain code periodically. The
 purpose of `epochs` module is to allow other modules to set that they
-would like to be signaled once every period. So another module can
+would like to be signalled once every period. So another module can
 specify it wants to execute code once a week, starting at UTC-time = x.
 `epochs` creates a generalized epoch interface to other modules so that
 they can easily be signalled upon such events.
@@ -33,10 +33,8 @@ Every timer has a unique identifier.
 Every epoch will have a start time, and an end time, where `end time = start time + timer interval`.
 On Gotabit mainnet, we only utilize one identifier, with a time interval of `one day`.
 
-The timer will tick at the first block whose blocktime is greater than the timer end time,
-and set the start as the prior timer end time. (Notably, its not set to the block time!)
-This means that if the chain has been down for awhile, you will get one timer tick per block,
-until the timer has caught up.
+The timer will tick at the first block whose blocktime is greater than the timer end time, and set the start as the prior timer end time. (Notably, its not set to the block time!)
+This means that if the chain has been down for awhile, you will get one timer tick per block, until the timer has caught up.
 
 ## State
 

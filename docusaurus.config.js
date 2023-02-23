@@ -1,76 +1,132 @@
-/**
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @format
- */
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'GotaBit Docs',
   tagline: 'GotaBit',
-  url: 'https://docs.gotabit.io',
+  url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'https://res.gotabit.io/svg/icon.svg',
+  favicon: 'img/favicon.ico',
 
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'gotabit', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
+
+  // Even if you don't use internalization, you can use this field to set useful
+  // metadata like html lang. For example, if your site is Chinese, you may want
+  // to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
+
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
-          editUrl: 'https://github.com/gotabit/docs/tree/main/',
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: false,
+        // {
+          // showReadingTime: true,
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          //editUrl:
+            //'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        //},
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
   ],
-  plugins: [
-    '@docusaurus/theme-live-codeblock'
-  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      algolia: {
-        appId: 'OZGZTY4HPJ',
-        apiKey: '28ad9e20411e65ab37491b4566220ee3',
-        indexName: 'Gotabit',
-        searchPagePath: 'search',
-      },
-      liveCodeBlock: {
-        playgroundPosition: 'bottom',
-      },
-      prism: {
-        theme: require('prism-react-renderer/themes/github'),
-        darkTheme: require('prism-react-renderer/themes/dracula'),
-      },
       navbar: {
-        title: '',
+        title: 'GotaBit',
         logo: {
-          src: 'https://res.gotabit.io/svg/gotabit-docs.svg',
-          srcDark: 'https://res.gotabit.io/svg/gotabit-docs-white.svg',
-        },
+          alt: 'My Site Logo',
+          src: 'img/favicon.ico',
+       },
         items: [
+          //{
+            //type: 'doc',
+            //docId: 'intro',
+            //position: 'left',
+            //label: 'Tutorial',
+          //},
+          //{to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/gotabit/docs',
+            href: 'https://github.com/facebook/docusaurus',
+            label: 'GitHub',
             position: 'right',
-            className: 'header-github-link',
-            'aria-label': 'GitHub repository',
           },
         ],
+      },
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'Tutorial',
+                to: '/tutorials/tokens/token',
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discordapp.com/invite/docusaurus',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/docusaurus',
+              },
+            ],
+          },
+          //{
+            //title: 'More',
+            //items: [
+              //{
+                //label: 'Blog',
+                //to: '/blog',
+              //},
+              //{
+                //label: 'GitHub',
+                //href: 'https://github.com/facebook/docusaurus',
+              //},
+            //],
+          //},
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} GotaBit Docs.`,
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
       },
     }),
 };

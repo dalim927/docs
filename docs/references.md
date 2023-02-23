@@ -1,0 +1,67 @@
+---
+title: References
+description: References, attributions and websites used in this documentation
+sidebar_position: 10
+---
+
+# References
+Acknowledgement to authors, moderators, companies and geeks of these references below:
+
+1. Analysis of data privacy, [Data Privacy Software Market Size](https://www.fortunebusinessinsights.com/infographics/data-privacy-software-market-105420)
+1. EU GDPR penalized Meta [Fined $400M](https://techcrunch.com/2023/01/04/facebook-instagram-gdpr-forced-consent-final-decisions/)
+1. Cosmos SDK [Cosmos Software Development Kit Documentation](https://docs.cosmos.network/main) 
+1. Google protocol buffers [Protocol buffers developer documentation](https://developers.google.com/protocol-buffers/docs/gotutorial)
+1. Tendermint Documentation [Using Tendermint](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#)
+1. Tendermint Wiki [Tendermint Overview](https://golden.com/wiki/Tendermint-4AP8KX8#Overview)
+1. Data center [level of security](https://www.eescorporation.com/data-center-security-levels/)
+1. Tendermint Validator setup [Tendermint Core documentation on validator.](https://docs.tendermint.com/v0.34/tendermint-core/validators.html)
+1. Cosmos Hub Validator setup [Cosmos Hub documentation](https://hub.cosmos.network/main/validators/validator-setup.html)
+1. Cosmos brand identity at [Cosmos Design](https://v1.cosmos.network/design)
+1. Cosmos trademark guidelines at [Cosmos Trademark](https://v1.cosmos.network/trademark)
+1. Validator security features [CosmosSDK](https://hub.cosmos.network/main/validators/security.html)
+1. Yubico HSM [YubiHSM 2 and YubiHSM 2 FIPS](https://www.yubico.com/products/hardware-security-module/)
+1. Disk defragmentation and software [Ubuntu](https://towardsdatascience.com/3-tools-to-monitor-and-optimize-your-linux-system-c8a46c18d692)
+1. Disk defragmentation and software [Windows](https://www.guru99.com/best-free-defrag-software.html)
+1. Disk defragmentation and software [MacOS](https://macpaw.com/reviews/best-mac-optimizer-software)
+1. Disk discussion Linux Ubuntu, refer to site [Ubunlog](https://ubunlog.com/en/optimiza-tu-sistema-y-libera-espacio-en-disco-en-ubuntu-y-derivados/#Optimizando_el_sistema_con_Stacer)
+1. Defrag post on Windows, refer to [geek blog](https://www.geeksinphoenix.com/blog/post/2021/12/12/how-to-defragment-and-optimize-your-drive-in-windows-11)
+1. Optimize Disk guide MacOS, refer to [Apple support](https://support.apple.com/en-au/guide/mac-help/sysp4ee93ca4/mac)
+1. Secret website article [sync state method](https://docs.scrt.network/secret-network-documentation/node-runners/node-setup/state-sync)
+1. Sync state [Juno instructions](https://docs.junonetwork.io/validators/joining-mainnet/sync-with-state-sync)
+1. Regen Network [Best Practices for keeping crypto safe](https://regen-network.medium.com/setting-up-keplr-wallet-and-best-practices-for-keeping-your-crypto-safe-cfe5f924692d)
+1. Tendermint and Ledger Live from [iqlusioninc](https://github.com/iqlusioninc/tmkms)
+1. Configuration items from [Cargo.org](https://crypto.org/docs/getting-started/notes-on-production-deployment.html)
+1. Juno mainnet setup on [Joining Mainnet](https://docs.junonetwork.io/validators/joining-mainnet)
+1. CosmosSDK setup on [Running in Production](https://docs.cosmos.network/v0.47/run-node/run-production)  
+1. Tendermint KMS from [iqlusioninc](https://github.com/iqlusioninc/tmkms)
+1. Tendermint Multi-Party-Computation Validator from [certusone](https://github.com/certusone/tendermint-mpc-validator)
+1. What is MPC? from [fireblocks](https://www.fireblocks.com/what-is-mpc/)
+1. Monitoring setup and use [Cosmos Monitoring with Grafana & Prometheus](https://medium.com/cypher-core/cosmos-how-to-set-up-your-own-network-monitoring-dashboard-fe49c63a8271)
+1. Validator FAQs [Cosmos Validator FAQs](https://hub.cosmos.network/main/validators/validator-faq.html)
+1. Validator Risks [Imperator Guide](https://medium.com/imperator-guide/what-are-the-risks-associated-with-a-validator-on-cosmos-based-blockchains-e528dc5b0c2e)
+1. Proposal on [Sentry Node Architecture](https://forum.cosmos.network/t/sentry-node-architecture-overview/454)
+
+1. Information on [Cosmos Governance Guide](https://hub.cosmos.network/main/governance/)
+1. Formatted governance proposal [Cosmos formatting a Proposal](https://hub.cosmos.network/main/governance/formatting.html)
+1. Best practices in [drafting proposal](https://blog.hubspot.com/sales/how-to-write-a-proposal)
+1. Cosmos Hub Forum [Community Pool Spend Proposal](https://forum.cosmos.network/t/multiple-recipients-in-community-pool-spend-proposals/6379)
+1. Introduction to [Cosmos Gas and Fees](https://docs.cosmos.network/main/basics/gas-fees)
+1. Cosmos Hub 2.0 Catalyst, Edward Wu  [Seeking Alpha article](https://seekingalpha.com/article/4560174-important-new-catalyst-for-atom)
+1. Validator and Delegator on [Cosmos Delegator Guide](https://hub.cosmos.network/main/delegators/delegator-guide-cli.html)
+1. When choosing a Validator [Delegator Security from Cosmos Hub](https://hub.cosmos.network/main/delegators/delegator-security.html)
+1. Information is sourced from [Cosmos Developer Portal](https://tutorials.cosmos.network/academy/1-what-is-cosmos/2-cosmos-ecosystem.html)
+1. Cosmos WebAssembly from [CosmWasm documentation](https://docs.cosmwasm.com/docs/)
+1. CosmWasm dApps from [Gisele Schout article: DApps in Cosmos Ecosystem](https://medium.com/stakin/dapps-and-blockchains-built-on-the-cosmos-ecosystem-31731494570b) 
+1. Setup [contract template cw-template](https://github.com/CosmWasm/cw-template?ref=morioh.com&utm_source=morioh.com) to create a quick template.
+1. Contract execution taken from [Gotabit SDK](https://docs.cosmwasm.com/docs/smart-contracts/contract-semantics)
+1. Information on message and submessage handling [Cosmos contract messages](https://docs.cosmwasm.com/docs/smart-contracts/message/message)
+1. Exercise sample smart contract [CosmWasm Example Smart Contract](https://docs.cosmwasm.com/docs/getting-started/compile-contract)
+1. CosmWasm bytecode verify [Don't trust. CosmWasm verify](https://medium.com/cosmwasm/dont-trust-cosmwasm-verify-db1caac2d335)
+1. GotabitSDK module functions see [CosmosSDK List of Modules](https://docs.cosmos.network/main/modules)
+1. Community group [Cosmos community special interest group](https://forum.cosmos.network/t/fund-notional-to-work-on-the-cosmos-hub/9706)
+1. Cosmos Special Interest Group [Cosmos meetup page](https://www.meetup.com/topics/cosmos/all/)
+1. Basic information of IBC [Inter-Blockchain Communication](https://docs.ignite.com/guide/ibc)
+1. Advanced topics of IBC [Developer Portal](https://tutorials.cosmos.network/hands-on-exercise/5-ibc-adv/)
+1. Cosmos draft stand for [Interchain Standards](https://github.com/cosmos/ibc)
+1. Chengwenxi at https://github.com/cosmos/cosmos-sdk/issues/9324
+1. Information on [Setting up ibc relayer](https://github.com/cosmos/relayer)

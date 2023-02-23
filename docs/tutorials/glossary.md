@@ -1,10 +1,10 @@
 ---
 title: Glossary
-description: Using the command line interface of gotabitd
+description: Terms used in this documentation
 sidebar_position: 2
 ---
 
-## Glossary
+# Glossary
 
 - OriginalVesting: The amount of coins (per denomination) that are initially part of a vesting account. These coins are set at genesis.
 - StartTime: The BFT time at which a vesting account starts to vest.
