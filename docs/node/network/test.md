@@ -7,7 +7,7 @@ sidebar_position: 3
 - Learn [Setting up keyring](/docs/node/pre-requisites/keyring.md) before going forward. This is needed to create a genesis account.
 - A testnet contains a configuration skeleton, initialized with only a bare minimum config/ and data/ files. You are provided with a downloadable config/genesis.json file that contains peers node id. Below is an example of how you can download the file.
 ```
-$ wget https:[provided by gotabit.../genesis.json] -o $HOME/.gotabit/config/genesis.json
+$ wget https:[TBA by GotaBit.../genesis.json] -o $HOME/.gotabit/config/genesis.json
 ```
 
 > :information_source: **Synopsis**

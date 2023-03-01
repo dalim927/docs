@@ -7,9 +7,8 @@ sidebar_position: 10
 # References
 Acknowledgement to authors, moderators, companies and geeks of these references below:
 
-1. Analysis of data privacy, [Data Privacy Software Market Size](https://www.fortunebusinessinsights.com/infographics/data-privacy-software-market-105420)
-1. EU GDPR penalized Meta [Fined $400M](https://techcrunch.com/2023/01/04/facebook-instagram-gdpr-forced-consent-final-decisions/)
 1. Cosmos SDK [Cosmos Software Development Kit Documentation](https://docs.cosmos.network/main) 
+1. [Epoch staking](https://github.com/cosmos/cosmos-sdk/discussions/8328)
 1. Google protocol buffers [Protocol buffers developer documentation](https://developers.google.com/protocol-buffers/docs/gotutorial)
 1. Tendermint Documentation [Using Tendermint](https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#)
 1. Tendermint Wiki [Tendermint Overview](https://golden.com/wiki/Tendermint-4AP8KX8#Overview)
@@ -62,6 +61,6 @@ Acknowledgement to authors, moderators, companies and geeks of these references 
 1. Cosmos Special Interest Group [Cosmos meetup page](https://www.meetup.com/topics/cosmos/all/)
 1. Basic information of IBC [Inter-Blockchain Communication](https://docs.ignite.com/guide/ibc)
 1. Advanced topics of IBC [Developer Portal](https://tutorials.cosmos.network/hands-on-exercise/5-ibc-adv/)
-1. Cosmos draft stand for [Interchain Standards](https://github.com/cosmos/ibc)
+1. Cosmos draft [Interchain Standards](https://github.com/cosmos/ibc)
 1. Chengwenxi at https://github.com/cosmos/cosmos-sdk/issues/9324
 1. Information on [Setting up ibc relayer](https://github.com/cosmos/relayer)

@@ -1,5 +1,5 @@
 ---
-title:  Gotabitd usage example
+title:  Gotabitd CLI usage example
 description: How to create a custom gotabit database.
 sidebar_position: 4
 ---
@@ -30,7 +30,7 @@ $ sudo apt install tree	 #Ubuntu/Debian
 # brew install tree #MacOSX
 ```
 
-## Initially check that gotabitd is available and the version used 
+## Check that gotabitd is available and the version used 
 ```
 gotabitd version --long
 ```
@@ -46,7 +46,7 @@ build_deps:
 ...
 ```
 
-## Then, create your gotabit chaindata in a custom directory using:
+## Then, create your GotaBit chaindata in a custom directory using:
 
 1. Moniker = "gtbmdb"
 1. Chain Id = "mainnet"
@@ -64,7 +64,7 @@ Output
 
 # The chaindata directory is as shown
 ```
-$HOME/Projects/gtbmaindb
+$HOME/Projects/gtbmdb
 ├── config
 │   ├── app.toml
 │   ├── client.toml

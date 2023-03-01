@@ -19,7 +19,7 @@ sidebar_position: 3
 
 When a blockchain grows in size over time, it will take longer to start again from initialization at zero block to synchronize at current block height of the peers (full syncronization) in the network.
 
-To enable validators to rapidly join the network, Cosmos State-sync module is used.  
+To enable validators to rapidly join the network, the State-sync module is used.  
 
 # Quick setup on a node.
 >:bulb: **References**

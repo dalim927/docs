@@ -53,9 +53,9 @@ Perform the steps to [Install Steps](/docs/node/setup/instruction-steps.md)
 ```
 # restore the config files
 tar -xzf vdata.tar.gz
-````
+```
 
-# Start the validator
+# Start and sync the validator
 Start validator. Staking begins once synchronized to current block height.
 ```
 gotabitd start

@@ -4,16 +4,16 @@ sidebar_position: 1
 ---
 
 # Running Production Mainnet
-General information to join Gotabit Mainnet.
+This is a general information section on joining Gotabit Mainnet.
 
-## Install the Gotabit software
+## Install the GotaBit software
 Please use this instruction step [Setting up Gotabit codebase](/docs/node/setup/instruction-steps.md)
 
 ## Recommended minimum hardware
-Please use the pre-requisites step [Gotabit Technical Environment](/docs/node/pre-requisites/techenv.md)
+Please use the pre-requisites step [GotaBit Technical Environment](/docs/node/pre-requisites/techenv.md)
 
-## Gotabit applications
-Visualize the [Gotabit Application Environment](/docs/node/pre-requisites/appenv.md)
+## GotaBit applications
+Visualize the [GotaBit Application Environment](/docs/node/pre-requisites/appenv.md)
 
 ## Miscellaneous Server setup
 Please do miscellaneous production server step [Misc Server Environment](/docs/node/pre-requisites/miscenv.md)
@@ -39,7 +39,7 @@ The $HOME/.gotabit/config/ directory contains
 - node.json
 
 ## Download the genesis file
-Download the genesis file from Gotabit site [TBA by Gotabit]
+Download the genesis file from GotaBit site [TBA by GotaBit]
 ```
 # First remove the existing file
 rm $HOME/.gotabit/config/genesis.json
@@ -47,12 +47,12 @@ wget https://[TBA by Gotabit].tar.gz
 tar -xvf [TBA by Gotabit]-genesis.tar.gz
 mv [TBA by Gotabit]-genesis.json $HOME/.gotabit/config/genesis.json
 ```
-Note:  [TBA by Gotabit] - to be advised by Gotabit team.
+Note:  [TBA by GotaBit] - to be advised by GotaBit team.
 
 ## Set SEEDS
 ```
 # Set the base repo URL for mainnet & retrieve seeds
-GT_CHAIN_REPO="[TBA by Gotabit]/$GT_CHAIN_ID" && \
+GT_CHAIN_REPO="[TBA by GotaBit]/$GT_CHAIN_ID" && \
 export GT_SEEDS="$(curl -sL "$GT_CHAIN_REPO/seeds.txt")"
 ​
 # Add seeds to config.toml
@@ -62,7 +62,7 @@ sed -i.bak -e "s/^seeds *=.*/seeds = \"$GT_SEEDS\"/" ~/.gotabit/config/config.to
 This will protect against spam, hack and smart contract attacks using wasm.
 Below changes will allow mainnet to accept gtb and ibc atoms. In $HOME/.gotabit/config/app.toml, set minimum gas prices:
 ```
-sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025gtb,0.001ibc\/[TBA address by Gotabit]]\"/" $HOME/.gotabit/config/app.toml
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025gtb,0.001ibc\/[TBA address by GotaBit]]\"/" $HOME/.gotabit/config/app.toml
 ```
 
 ##  Add Genesis Account (or optionally restore) a local key pair
@@ -98,7 +98,7 @@ Replace <key-name> with a key name
 ```
 >:bulb: **Tip**
 - Get some GTB tokens to bond to your validator. To be in the active set you will need to have enough tokens to be in the top 150 validators by delegation weight. 
-- Optionally setup cosmovisor and start the node. See
+
 
 ## Start the node
 Start the mainnet.
@@ -117,7 +117,7 @@ Synchronization has completed if the result return a false.
 Alternatively, syncing can be done 
 1. From genesis and following the Mainnet Upgrades path 
 1. Sync from Snapshot. Download and extract snapshot
-[Downlpad link TBA by gotabit]
+[Downlpad link TBA by GotaBit]
 1. Sync with state-sync Please refer to [State-sync](/docs/node/validator/run/sync.md)
 
 >:warning: **Caution**
@@ -128,8 +128,7 @@ It is advised that these files are not to be distributed and to be kept in a saf
 1. $HOME/.gotabit/config/priv_validator_key.json
 1. $HOME/.gotabit/config/node_key.json
 
-
 # More information
-You can find these in the following
+More information can be found in the following
 1. Juno section on [Joining Mainnet](https://docs.junonetwork.io/validators/joining-mainnet)
 1. CosmosSDK section on [Running in Production](https://docs.cosmos.network/v0.47/run-node/run-production)  

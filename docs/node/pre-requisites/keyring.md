@@ -14,7 +14,7 @@ Do the following to setup a variable called "myvalidator"
 gotabitd keys add myvalidator --keyring-backend=test --home "[home directory]"
 ```
 > :memo: **Note**
-subcommand "--home" is optionally used to allow gotabit to store the keys pointing to a different home directory. 
+subcommand "--home" is optionally used to allow gotabitd to store the keys pointing to a different home directory. 
 
 As blockchain addresses are long, set up an environment variable for extracting the content of myvalidator address variable.  Unix shell command is given below. 
 

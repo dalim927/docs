@@ -6,14 +6,14 @@ sidebar_position: 2
 # Validator only disk usage
 Users can run validators in full nodes or pruned nodes.  Each user is encouraged to run full nodes.  The differences are:
 
-Full node contains record headers and full payload of historical information from genesis.  Therefore storage can run into terabytes of chaindata and takes time to restore.
+Full node contains record headers and full payload of historical information from genesis. Therefore storage can run into terabytes of chaindata and takes time to restore.
 
 Pruned node processes only block headers and a small subset of transactions.
 
 An optimal solution is to fastsync (without headers) to the block height and restart validators with fullsync thereafter.  This will enable validators to continue staking as well as managing storage overflow in overall system storage management. 
 
 # Operating system environment
-In an operating environment, optimize your disk storage strategies for respective operating system where the server is running. 
+In an operating environment, there are strategies on how to optimize your disk storage for respective operating systems where the server is running. 
 
 Disks are monitored and defragmented using software tools. Example tools can be found as shown:
 1. [Ubuntu](https://towardsdatascience.com/3-tools-to-monitor-and-optimize-your-linux-system-c8a46c18d692)

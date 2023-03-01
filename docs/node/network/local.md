@@ -6,7 +6,6 @@ sidebar_position: 2
 > :bulb: **Tip:** 
 - Learn [Setting up keyring](/docs/node/pre-requisites/keyring.md) before going forward.  This is needed to create a genesis account.
 - For account creation please refer to [Cosmos account sections](https://docs.cosmos.network/main/basics/accounts)
-- For account creation please refer to [Cosmos account sections](https://docs.cosmos.network/main/basics/accounts)
 
 > :information_source: **Synopsis**
 Before running a local node, several steps must be performed in sequence. 

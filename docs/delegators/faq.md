@@ -1,7 +1,7 @@
 ---
 title: Delegator FAQ
 description: Delegator FAQ
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Delegator FAQ
@@ -10,7 +10,7 @@ sidebar_position: 3
 
 
 ##  What is a delegator?
-A delegator is a variant of validator. A delegator is someone who has ATOM tokens and cannot or does not wish to be a validator.
+A delegator is a variant of validator. A delegator is someone who has GTB tokens and cannot or do not wish to be a validator.
 
 ##  Choosing a validator
 A delegator must also be alert to the reputation of a chosen validator.  They should build a social network like subscribing to Cosmos Hub forums where mutual interests and friendships are formed. 

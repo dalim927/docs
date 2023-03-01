@@ -3,7 +3,7 @@ title: Setup a validator
 sidebar_position: 1
 ---
 > :information_source: **Synopsis** 
-- You have reached here because you have performed a [Setup and run testnet node](/docs/node/network/test.md ) and is ready to prepare a validator node. 
+- You have reached here because you have performed a [Setup and run a testnet node](/docs/node/network/test.md ) and is ready to prepare a validator node locally. 
 
 
 #  Running a Validator
@@ -11,7 +11,6 @@ sidebar_position: 1
 - [Setup and run mainnet](/docs/node/network/local.md ) is configured using keyring and a local node is avaiable. 
 - If you are using key management system, then read [Setup kmd].
 - The production mainnet is fully synchronized.
-
 
 ##  What is a Validator?
 A validator function is to secure the Proof of Stake network. As an example, in a DDOS attack, the validator can isolate the network. It is also a working participant of the Tendermint consensus protocol in block provisioning. A validator can run as a single full node or a signer node. A more detailed description is given earlier [here](/docs/node/validator/what.md).
@@ -32,7 +31,7 @@ gotabitd tendermint show-validator
 Create your validator using the command below
 ```
 gotabitd tx staking create-validator \
-  --amount=1000000uatom \
+  --amount=1000000ugtb \
   --pubkey=$(gotabitd tendermint show-validator) \
   --moniker=<moniker> \
   --chain-id=<chain-id> \
@@ -41,7 +40,7 @@ gotabitd tx staking create-validator \
   --commission-max-change-rate="0.01" \
   --min-self-delegation="1000000" \
   --gas="auto" \
-  --gas-prices="0.0025uatom" \
+  --gas-prices="0.0025ugtb" \
   --from=<key_name> \
   --keyring-backend=test  where eg. moniker="gtbmdb"
                                     chain-id="mainnet"

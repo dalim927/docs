@@ -4,13 +4,12 @@ description: Describe delegator function and liabilities guide
 sidebar_position: 1
 ---
 
-# Delegator Guide (CLI)
+# Delegator Guide
 
-Please refer to:
-1. Validator and Delegator on [Cosmos Delegator Guide](https://hub.cosmos.network/main/delegators/delegator-guide-cli.html)
+>:memo: **Reference** Please read the [Cosmos Delegator Guide](https://hub.cosmos.network/main/delegators/delegator-guide-cli.html).
 
 # Delegator function and liability
-A delegator is a variant of a validator.  Cosmos ATOM holders who cannot or do not wish to be validators can delegate their ATOM to validators and in return is able to extract a percentage of the revenue from them.
+A delegator is a variant of a validator.  Gotabit GTB holders who cannot or do not wish to be validators can delegate their GTB tokens to validators and in return is able to extract a percentage of the revenue from them.
 
 Delegators should participate in governance and must actively monitor the actions of the validators. If a validator is in breach of the staking rules and gets penalized, the delegators will also be punished.
 

@@ -31,7 +31,7 @@ Download the repository and follow the instructions given:
 1. [Tendermeint Multi Party Computation validator](https://github.com/certusone/tendermint-mpc-validator)
 
 # Configuration
-Remember to do:
+Remember to do the following:
 1. To make a node available as a relay for an mpc validator, use "priv_validator_laddr" to add validator nodes IP address and port to the configuration item of the config/config.toml
   
 1. Update tmkms.toml socket address with the same address on tendermint/config/config.toml.

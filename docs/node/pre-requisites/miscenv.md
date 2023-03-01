@@ -3,13 +3,11 @@ title: Other Production Setup
 sidebar_position: 3
 ---
 # Requirements
-Below are setup requirements for the Mainnet production server.
+The following are setup requirements for the Mainnet production server.
 
-## Minimum Server firewall
+## Important mandatory firewall setups 
 
-Below are important mandatory firewall setups. 
-
-At a minimum, the following 3 endpoints are to opened for the network traffic.
+At a minimum, the following 3 endpoints are to be opened for the network traffic.
 
 - Reset UFW to disallow all incoming connections and allow outgoing
 ```
@@ -32,7 +30,7 @@ sudo ufw allow 26656/tcp
 sudo ufw allow 26660/tcp
 ```
 
-## Optional firewall ports to be enabled
+## Optional firewall ports
 Please check with your network admnistrator for assistance.
 
 Tendermint JsonRPC

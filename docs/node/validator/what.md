@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ##  Introduction
 
-The Gotabit blockchain is based om the CosmosSDK framework that uses the [Tendermint Core](https://github.com/tendermint/tendermint/tree/master/docs/introduction) Consensus engine. It relies on a set of validators that are responsible for committing new blocks in the blockchain. Validators are working participants in the consensus protocol by broadcasting votes that contain cryptographic signatures signed by each validator's private key.
+The Gotabit blockchain is based om the GotaBitSDK framework that uses the [Tendermint Core](https://github.com/tendermint/tendermint/tree/master/docs/introduction) Consensus engine. It relies on a set of validators that are responsible for committing new blocks in the blockchain. Validators are working participants in the consensus protocol by broadcasting votes that contain cryptographic signatures signed by each validator's private key.
 
 Validator participants can bond their own GTB and have GTB delegated, or staked, to them by token holders. The validators are determined by the total number of GTB tokens delegated to them. The top 12 validator participants with the most voting power are current Gotabit validators.
 
@@ -17,7 +17,7 @@ If validators double sign or are offline for an extended period, their deposits 
 
 ##  Hardware
 
-For validator key management, validators must set up a physical operation that is secured with restricted access. For example, validators can co-locate in data centers with high [level of security](https://www.eescorporation.com/data-center-security-levels/).
+For validator key management, validators must set up a physical operation that is secured with restricted access. For example, validators can co-locate with sentry node in data centers for high [level of security](https://www.eescorporation.com/data-center-security-levels/).
 
 Validators are expected to be hosted at server datacenter location with redundant power, connectivity, and storage backups. Datacenters have several redundant networking boxes for fiber, firewall and switches and small servers with redundant hard drive and failover.
 
