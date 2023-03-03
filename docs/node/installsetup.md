@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 This guide will explain how to install the GotaBit binary and run the cli. With this binary installed on a server, you can participate on the mainnet as either a Full Node or a Validator.
 
 # Build Requirements
-At present, the GotsBitSDK fully supports installation on linux distributions. For the purpose of this instruction set, we'll be using Ubuntu 20.04.3 LTS. It is also possible to install GotaBit on Unix, while Windows may require additional unsupported third party installation. All steps are listed below for a clean install.
+At present, the Gotabit fully supports installation on linux distributions. For the purpose of this instruction set, we'll be using Ubuntu 20.04.3 LTS. It is also possible to install GotaBit on Unix, while Windows may require additional unsupported third party installation. All steps are listed below for a clean install.
 
 1. [Update & install build tools](#build-tools)
 
@@ -31,7 +31,7 @@ sudo apt-get install -y make gcc
 
 ## Install Go
 
->:memo: **Go 1.18+** or later is required for the Gotabit SDK.
+>:memo: **Go 1.18+** or later is required for the Gotabit.
 
 We suggest the following two ways to install Go. Check out the [official docs](https://go.dev/doc/install) and Go installer for the correct download for your operating system. Alternatively, you can install Go yourself from the command line. Detailed below are standard default installation locations, but feel free to customize.
 
@@ -53,41 +53,9 @@ Remember to add GOPATH to your $PATH environment variable. If you're not sur
 export PATH=$PATH:$(go env GOPATH)/bin
 ```
 
-## Gotabit installation
-The installation given is from binary but docker installation option is also available below:
 
-### From Docker
 
-We also have a pre-built docker images.  [Github Packages](https://github.com/gotabit/gotabit/pkgs/container/gotabit) [Docker Hub](https://hub.docker.com/r/gotabit/gotabit)
-
-```mdx-code-block
-<Tabs>
-  <TabItem value="Run with docker" default>
-```
-
-``` bash
-docker pull gotabit/gotabit:1.0.0
-docker run --name gotabit -d -p 1317:1317 -p 26657:26657 \
-        -v $PWD/runtime:/root/.gotabit gotabit/gotabit:1.0.0 /opt/chain_run
-```
-
-```mdx-code-block
-  </TabItem>
-  <TabItem value="Run with docker compose">
-```
-
-``` bash
-git clone https://github.com/gotabit/gotabit
-cd gotabit
-docker-compose up -d
-```
-
-```mdx-code-block
-  </TabItem>
-</Tabs>
-```
-
-## Install GotaBit from binary
+## Install GotaBit
 
 Next, let's install the latest version of GotaBit. Make sure you git checkout the correct released [official version] (https://github.com/gotabit/gotabit) and check out the `main` branch for the latest stable release.
 
@@ -135,14 +103,6 @@ Build tags indicate special features that have been enabled in the binary.
 |-----------|-----------------------------------------------------|
 | netgo     | Name resolution will use pure Go code               |
 | ledger   	| Ledger devices are supported (hardware wallets)     |
-
-# Work with a GotaBit SDK Clone
-To work with your own modifications of the GotaBit SDK, make a fork of this repo, and add a replace clause to the go.mod file. The replace clause you add to go.mod must provide the correct import path:
-
-- Make appropriate changes
-- Add replace github.com/gotabit/sdk-go => /path/to/clone/sdk-go to go.mod
-- Run make clean install or make clean build
-- Test changes
 
 # Server backend setup
 The following are setup requirements for the mainnet production server.
@@ -194,6 +154,28 @@ Enable ufw
 ```
 sudo ufw enable
 ```
+
+## Run with docker
+The installation given is from binary but docker installation option is also available below:
+
+We also have a pre-built docker images.  [Github Packages](https://github.com/gotabit/gotabit/pkgs/container/gotabit) [Docker Hub](https://hub.docker.com/r/gotabit/gotabit)
+
+* Run with docker
+
+``` bash
+docker pull gotabit/gotabit:1.0.0
+docker run --name gotabit -d -p 1317:1317 -p 26657:26657 \
+        -v $PWD/runtime:/root/.gotabit gotabit/gotabit:1.0.0 /opt/chain_run
+```
+
+* Run with docker compose
+
+``` bash
+git clone https://github.com/gotabit/gotabit
+cd gotabit
+docker-compose up -d
+```
+
 ## Signing
 
 ### File

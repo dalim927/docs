@@ -3,6 +3,7 @@ title: Joining Mainnet
 sidebar_position: 4
 ---
 >:memo: **References**
+// replace gotabit url
 - [Joining Mainnet Guide](https://hub.cosmos.network/main/hub-tutorials/join-mainnet.html)
 
 
@@ -45,14 +46,6 @@ For instructions to join as a validator, please also see the [Validator Guide](/
 # Background
 The current GotaBit Hub mainnet gotabithub-4. Visit the migration section of the Hub's docs for more information on previous chain migrations.
 
-## Explorers
-There are many explorers for the GotaBit Hub. For reference while setting up a node, here are a few recommendations:
-
-- [Mintscan](https://www.mintscan.io/cosmos)
-- [Testnet Big Dipper](https://scan-testnet.gotabit.dev/)
-- [Hubble](https://hubble.figment.io/cosmos/chains/cosmoshub-4)
-- [Stake ID](https://cosmos.stake.id/#/)
-
 ## Getting Started
 Make sure the following prerequisites are completed:
 
@@ -62,7 +55,7 @@ Ensure gotabit is properly installed. See the installation guide (opens new wind
 Follow the configuration guide to intialize and prepare the node to sync with the network.
 
 ## Hardware
-Running a full archive node can be resource intensive as the full current cosmoshub-4 state is over 1.4TB. For those who wish to run state sync or use quicksync, the following hardware configuration is recommended:
+Running a full archive node can be resource intensive as the full current gotabithub-4 state is over 1.4TB. For those who wish to run state sync or use quicksync, the following hardware configuration is recommended:
 
 | Node Type     | RAM  | Storage     |  
 |---------------|------|-------------|
@@ -73,7 +66,7 @@ Running a full archive node can be resource intensive as the full current cosmos
 * Storage size for validators will depend on level of pruning.
 
 ## General Configuration
-Make sure to walk through the basic setup and configuration. Operators will need to initialize gotabit, download the genesis file for cosmoshub-4, and set persistent peers and/or seeds for startup.
+Make sure to walk through the basic setup and configuration. Operators will need to initialize gotabit, download the genesis file for gotabithub-4, and set persistent peers and/or seeds for startup.
 
 ### Initialize Chain
 Choose a custom moniker for the node and initialize. By default, the init command creates the ~/.gotabit directory with subfolders config and data. In the /config directory, the most important files for configuration are app.toml and config.toml.
@@ -202,7 +195,7 @@ enable = true
 address = "0.0.0.0:9090"
 ```
 ### Sync Options
-There are three main ways to sync a node on the Cosmos Hub; Blocksync, State Sync, and Quicksync. See the matrix below for the Hub's recommended setup configuration. This guide will focus on syncing two types of common nodes; full and pruned. For further information on syncing to run a validator node, see the section on Validators (opens new window).
+There are three main ways to sync a node on the Gotabit Hub; Blocksync, State Sync, and Quicksync. See the matrix below for the Hub's recommended setup configuration. This guide will focus on syncing two types of common nodes; full and pruned. For further information on syncing to run a validator node, see the section on Validators (opens new window).
 
 There are two types of concerns when deciding which sync option is right. Data integrity refers to how reliable the data provided by a subset of network participants is. Historical data refers to how robust and inclusive the chain’s history is.
 
@@ -213,7 +206,7 @@ There are two types of concerns when deciding which sync option is right. Data i
 | Full Historical Data    | Quicksync - Archived| BlockSync           |
 
 
-If a node operator wishes to run a full node, it is possible to start from scratch but will take a significant amount of time to catch up. Node operators not concerned with rebuilding original state from the beginning of cosmoshub-4 can also leverage Quicksync's available archive history.
+If a node operator wishes to run a full node, it is possible to start from scratch but will take a significant amount of time to catch up. Node operators not concerned with rebuilding original state from the beginning of gotabithub-4 can also leverage Quicksync's available archive history.
 
 For operators interested in bootstrapping a pruned node, either Quicksync or State Sync would be sufficient.
 
@@ -308,18 +301,11 @@ Once state sync successfully completes, the node will begin to process blocks no
   </TabItem>
   <TabItem value="QuickSync">
 ```
-### Quicksync
-Quicksync.io offers several daily snapshots of the Cosmos Hub with varying levels of pruning (archive 1.4TB, default 540GB, and pruned 265GB). For downloads and installation instructions, visit the [Cosmos Quicksync guide](https://quicksync.io/networks/cosmos.html).
 
-
-```mdx-code-block
-  </TabItem>
-</Tabs>
-```
 ### Snapshots
 Saving and serving snapshots helps nodes rapidly join the network. Snapshots are now enabled by default effective 1/20/21.
 
-While not advised, if a node operator needs to customize this feature, it can be configured in ~/.gotabit/config/app.toml. The Cosmos Hub recommends setting this value to match pruning-keep-every in config.toml.
+While not advised, if a node operator needs to customize this feature, it can be configured in ~/.gotabit/config/app.toml. The Gotabit Hub recommends setting this value to match pruning-keep-every in config.toml.
 
 Note: It is highly recommended that node operators use the same value for snapshot-interval in order to aid snapshot discovery. Discovery is easier when more nodes are serving the same snapshots.
 
@@ -369,11 +355,6 @@ ERR UPGRADE "Vega" NEEDED at height: 8695000
 Again, make sure to backup ~/.gotabit
 
 Install GotaBit [V1.0.1](https://github.com/gotabit/gotabit/releases/tag/v1.0.1)and restart the daemon.
-
-### Cosmovisor
-Cosmovisor is a process manager developed to relieve node operators of having to manually intervene every time there is an upgrade. Cosmovisor monitors the governance module for upgrade proposals; it will take care of downloading the new binary, stopping the old one, switching to the new one, and restarting.
-
-For more information on how to run a node via Cosmovisor, [check docs](https://github.com/cosmos/cosmos-sdk/blob/v0.45.0/cosmovisor/README.md).
 
 ### Running via Background Process
 To run the node in a background process with automatic restarts, it's recommended to use a service manager like systemd. To set this up run the following:
@@ -455,10 +436,3 @@ invariant broken:
     CRITICAL please submit the following transaction:
         gotabitd tx crisis invariant-broken staking supply
 ```
-
-
-
-
-
-
-
