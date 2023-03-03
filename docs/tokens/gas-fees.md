@@ -4,15 +4,14 @@ description: Using the command line interface of gotabitd
 sidebar_position: 2
 ---
 # Introducing Gas and Fees
->:bulb: **Reference**: Cosmos documentation gives a detailed explanation on Gas and Fees. See [Cosmos Gas and Fees](https://docs.cosmos.network/main/basics/gas-fees).
 
-In the GotaBit SDK, gas is a special unit that is used to track the consumption of resources during execution. gas is typically consumed whenever read and writes are made to the store, but it can also be consumed if expensive computation needs to be done. It serves two main purposes:
+In the GotaBit, gas is a special unit that is used to track the consumption of resources during execution. gas is typically consumed whenever read and writes are made to the store, but it can also be consumed if expensive computation needs to be done. It serves two main purposes:
 
-Make sure blocks are not consuming too many resources and are finalized. This is implemented by default in the Cosmos SDK via the block gas meter.
-Prevent spam and abuse from end-user. To this end, gas consumed during message execution is typically priced, resulting in a fee (fees = gas * gas-prices). fees generally have to be paid by the sender of the message. Note that the Cosmos SDK does not enforce gas pricing by default, as there may be other ways to prevent spam (e.g. bandwidth schemes). Still, most applications implement fee mechanisms to prevent spam by using the AnteHandler.
+Make sure blocks are not consuming too many resources and are finalized. This is implemented by default in the Gotabit via the block gas meter.
+Prevent spam and abuse from end-user. To this end, gas consumed during message execution is typically priced, resulting in a fee (fees = gas * gas-prices). fees generally have to be paid by the sender of the message. Note that the gotabit does not enforce gas pricing by default, as there may be other ways to prevent spam (e.g. bandwidth schemes). Still, most applications implement fee mechanisms to prevent spam by using the AnteHandler.
 
 # Gas Meter
-In the GotaBit SDK, gas is a simple alias for uint64, and is managed by an object called a gas meter. Gas meters implement the GasMeter interface
+In the GotaBit, gas is a simple alias for uint64, and is managed by an object called a gas meter. Gas meters implement the GasMeter interface
 ```
 store/types/gas.go
 ```
@@ -46,7 +45,7 @@ The gas meter is generally held in ctx, and consuming gas is done with the follo
 ctx.GasMeter().ConsumeGas(amount, "description")
 ```
 
-By default, the Cosmos SDK makes use of two different gas meters, the main gas meter and the block gas meter.
+By default, the Gotabit makes use of two different gas meters, the main gas meter and the block gas meter.
 
 # Main Gas Meter
 ctx.GasMeter() is the main gas meter of the application. The main gas meter is initialized in `BeginBlock` via `setDeliverState`, and then tracks gas consumption during execution sequences that lead to state-transitions, i.e. those originally triggered by `BeginBlock`, `DeliverTx` and `EndBlock`. At the beginning of each `DeliverTx`, the main gas meter must be set to 0 in the AnteHandler, so that it can track gas consumption per-transaction.
@@ -54,7 +53,7 @@ ctx.GasMeter() is the main gas meter of the application. The main gas meter is i
 Gas consumption can be done manually, generally by the module developer in the `BeginBlocker`, `EndBlocker` or `Msg service`, but most of the time it is done automatically whenever there is a read or write to the store. This automatic gas consumption logic is implemented in a special store called GasKv.
 
 # Block Gas Meter
-`ctx.BlockGasMeter()` is the gas meter used to track gas consumption per block and make sure it does not go above a certain limit. A new instance of the BlockGasMeter is created each time BeginBlock is called. The BlockGasMeter is finite, and the limit of gas per block is defined in the application's consensus parameters. By default, Cosmos SDK applications use the default consensus parameters provided by Tendermint:
+`ctx.BlockGasMeter()` is the gas meter used to track gas consumption per block and make sure it does not go above a certain limit. A new instance of the BlockGasMeter is created each time BeginBlock is called. The BlockGasMeter is finite, and the limit of gas per block is defined in the application's consensus parameters. By default, Gotabit use the default consensus parameters provided by Tendermint:
 ```
 types/params.go
 ```
@@ -130,7 +129,6 @@ Tx interface {
 	ValidateBasic() error
 }
 ```
->:memo: **Reference**  See [Github full example](https://github.com/cosmos/cosmos-sdk/blob/v0.47.0-rc1/types/tx_msg.go#L42-L50)
 
 This enables developers to play with various types for the transaction of their application. In the default auth module, the default transaction type is Tx:
 ```
@@ -151,7 +149,6 @@ message Tx {
   repeated bytes signatures = 3;
 }
 ```
->:memo: **Reference**  See [Github full example](https://github.com/cosmos/cosmos-sdk/blob/v0.47.0-rc1/proto/cosmos/tx/v1beta1/tx.proto#L13-L26)
 
 - Verify signatures for each message contained in the transaction. Each message should be signed by one or multiple sender(s), and these signatures must be verified in the anteHandler.
 - During `CheckTx`, verify that the gas prices provided with the transaction is greater than the local `min-gas-prices` (as a reminder, `gas-prices` can be deducted from the following equation: `fees = gas * gas-prices`). `min-gas-prices` is a parameter local to each full-node and used during `CheckTx` to discard transactions that do not provide a minimum amount of `fees`. This ensures that the mempool cannot be spammed with garbage transactions.

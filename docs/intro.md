@@ -6,7 +6,7 @@ slug: /
 *`Revised Draft version 0.3`*
 # Using this document
 
-This document is a detailed description of the GotaBit Network technology.  GotaBit built a specific blockchain application from ground up using GotaBitSDK, Tendermint core and other associated technologies seamlessly.  
+This document is a detailed description of the GotaBit Network technology. GotaBit built a specific blockchain application from ground up using [CosmosSDK](https://docs.cosmos.network/main), Tendermint core and other associated technologies seamlessly.  
 
 The following are quick links to relevant sections of the document. 
 
