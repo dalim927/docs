@@ -1,7 +1,7 @@
 ---
-title: CosmWasm with Localnet
-description: Using CosmWasm local node
-sidebar_position: 4
+title: Install Wasmd 
+description: Using Wasmd local node
+sidebar_position: 3
 ---
 
 # CosmWasm requirements

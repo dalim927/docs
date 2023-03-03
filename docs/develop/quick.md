@@ -1,8 +1,10 @@
 ---
-title: Quick Connect
-description: Quick start with wasm and smart contract
-sidebar_position: 2
+title: Create a Simple Project
+description: Simple Contract code on blockchain
+sidebar_position: 3
 ---
+`to be revised`
+
 >:information_source: **Synopsis**
 Setup `cw-template`.
 1. Create new repo from template.
